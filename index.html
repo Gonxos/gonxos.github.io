@@ -274,12 +274,35 @@
     .exp-bullets li::before { content: '→'; color: var(--accent2); flex-shrink: 0; margin-top: 1px; font-size: 13px; }
 
     /* TECH */
+    /* TECH (ACTUALIZADO CON ICONOS) */
     .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
     .tech-group { background: var(--surface); padding: 24px; transition: background 0.2s; }
     .tech-group:hover { background: var(--surface2); }
     .tech-group-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
-    .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tech-tag { padding: 4px 10px; border-radius: 3px; font-size: 12px; font-weight: 500; font-family: 'DM Mono', monospace; }
+    .tech-tags { 
+      display: flex; 
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px; 
+    }
+    
+    /* Aquí es donde añadimos el flex para alinear el icono con el texto */
+    .tech-tag { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      padding: 4px 10px; 
+      border-radius: 3px; 
+      font-size: 12px; 
+      font-weight: 500; 
+      font-family: 'DM Mono', monospace; 
+    }
+    /* Tamaño fijo para todos los logos */
+    .tech-tag img {
+      width: 14px;
+      height: 14px;
+    }
+    
     .tech-tag.ai   { background: rgba(123,97,255,.15); color: #a78bfa; border: 1px solid rgba(123,97,255,.3); }
     .tech-tag.be   { background: rgba(0,212,255,.1); color: var(--accent); border: 1px solid rgba(0,212,255,.25); }
     .tech-tag.data { background: rgba(0,255,170,.08); color: var(--accent3); border: 1px solid rgba(0,255,170,.25); }
@@ -370,7 +393,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             gonjibra@gmail.com
           </a>
-          <a href="https://www.linkedin.com/in/gonzalo-jim%C3%A9nez-bravo/" target="_blank" class="contact-chip">
+          <a href="https://www.linkedin.com/in/gonzalojimenezbravo" target="_blank" class="contact-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             LinkedIn
           </a>
@@ -453,44 +476,45 @@
       <h2 class="section-title">Tecnologías</h2>
       <div class="section-line"></div>
     </div>
+
     <div class="tech-grid">
       <div class="tech-group">
         <div class="tech-group-label">Inteligencia Artificial</div>
         <div class="tech-tags">
-          <span class="tech-tag ai">LLMs</span>
-          <span class="tech-tag ai">LangGraph</span>
-          <span class="tech-tag ai">LangChain</span>
-          <span class="tech-tag ai">Azure OpenAI</span>
+          <span class="tech-tag ai"><img src="https://cdn.simpleicons.org/huggingface/a78bfa" alt="LLMs"> LLMs</span>
+          <span class="tech-tag ai"><img src="https://cdn.simpleicons.org/graphql/a78bfa" alt="LangGraph"> LangGraph</span>
+          <span class="tech-tag ai"><img src="https://cdn.simpleicons.org/langchain/a78bfa" alt="LangChain"> LangChain</span>
+          <span class="tech-tag ai"><img src="data:image/svg+xml,%3Csvg%20fill%3D%22%23a78bfa%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5.483%2021.3H24L14.025%204.013l-3.038%208.347%205.836%206.938L5.483%2021.3zM13.23%202.7L6.15%2015.213%200%2021.3h5.535l6.113-10.45L13.23%202.7z%22%2F%3E%3C%2Fsvg%3E" alt="Azure OpenAI"> Azure OpenAI</span>
+          <span class="tech-tag ai"><img src="https://cdn.simpleicons.org/google/a78bfa" alt="Google ADK"> Google ADK</span>
         </div>
       </div>
       <div class="tech-group">
         <div class="tech-group-label">Backend</div>
         <div class="tech-tags">
-          <span class="tech-tag be">Python</span>
-          <span class="tech-tag be">FastAPI</span>
-          <span class="tech-tag be">Java</span>
-          <span class="tech-tag be">Spring</span>
+          <span class="tech-tag be"><img src="https://cdn.simpleicons.org/python/00d4ff" alt="Python"> Python</span>
+          <span class="tech-tag be"><img src="https://cdn.simpleicons.org/fastapi/00d4ff" alt="FastAPI"> FastAPI</span>
+          <span class="tech-tag be"><img src="https://cdn.simpleicons.org/openjdk/00d4ff" alt="Java"> Java</span>
+          <span class="tech-tag be"><img src="https://cdn.simpleicons.org/spring/00d4ff" alt="Spring"> Spring</span>
         </div>
       </div>
       <div class="tech-group">
         <div class="tech-group-label">Datos</div>
         <div class="tech-tags">
-          <span class="tech-tag data">PostgreSQL</span>
-          <span class="tech-tag data">AlloyDB</span>
+          <span class="tech-tag data"><img src="https://cdn.simpleicons.org/postgresql/00ffaa" alt="PostgreSQL"> PostgreSQL</span>
+          <span class="tech-tag data"><img src="https://cdn.simpleicons.org/googlecloud/00ffaa" alt="AlloyDB"> AlloyDB</span>
         </div>
       </div>
       <div class="tech-group">
         <div class="tech-group-label">Tooling</div>
         <div class="tech-tags">
-          <span class="tech-tag tool">Git</span>
-          <span class="tech-tag tool">Docker</span>
-          <span class="tech-tag tool">Jira</span>
-          <span class="tech-tag tool">Jenkins</span>
-          <span class="tech-tag tool">Sonar</span>
+          <span class="tech-tag tool"><img src="https://cdn.simpleicons.org/git/8fa8c0" alt="Git"> Git</span>
+          <span class="tech-tag tool"><img src="https://cdn.simpleicons.org/docker/8fa8c0" alt="Docker"> Docker</span>
+          <span class="tech-tag tool"><img src="https://cdn.simpleicons.org/jira/8fa8c0" alt="Jira"> Jira</span>
+          <span class="tech-tag tool"><img src="https://cdn.simpleicons.org/jenkins/8fa8c0" alt="Jenkins"> Jenkins</span>
+          <span class="tech-tag tool"><img src="data:image/svg+xml,%3Csvg%20fill%3D%22%238fa8c0%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M16.635%2015.353c-.352%200-.693-.058-1.018-.163a3.52%203.52%200%200%201-1.637-.991%203.55%203.55%200%200%201-.806-1.554%204.8%204.8%200%200%201-.186-1.391c0-.77.16-1.488.472-2.128a3.94%203.94%200%200%201%201.3-1.464%204.6%204.6%200%200%201%201.954-.728%209.9%209.9%200%200%201%202.378-.04%2014.1%2014.1%200%200%201%202.235.34l.267.067-.354.551a14.2%2014.2%200%200%200-2.28%204.88%2011.2%2011.2%200%200%200-.462%202.383l-.033.472-.464-.093a11.5%2011.5%200%200%201-1.366-.14zm4.195-7.147a13.3%2013.3%200%200%200-2.022-.29%208.86%208.86%200%200%200-2.126.04%203.65%203.65%200%200%200-1.543.57%202.94%202.94%200%200%200-.977%201.103c-.235.48-.352.998-.352%201.554%200%20.376.046.728.138%201.055a2.53%202.53%200%200%200%20.57%201.12c.288.312.636.561%201.045.748a3.17%203.17%200%200%200%201.25.244c.484.02.943.084%201.383.197a10.1%2010.1%200%200%201%20.454-2.115%2013.1%2013.1%200%200%201%202.18-4.227zM2.68%2012.396A13.2%2013.2%200%200%201%205.49%207.027a13.9%2013.9%200%200%201%204.793-3.664A13%2013%200%200%201%2015.65.989l.465-.058.125.45a13.2%2013.2%200%200%200%201.693%203.513l.3.439-.516.145c-.322.091-.652.176-.991.258a11.1%2011.1%200%200%201-2.083.187%2011.4%2011.4%200%200%201-3.605-.59%2013.3%2013.3%200%200%201-4.706-2.91%2012.2%2012.2%200%200%200-2.924%203.79c-.832%201.637-1.254%203.425-1.254%205.309%200%201.83.415%203.57%201.229%205.166a12.1%2012.1%200%200%200%203.332%204.023A12.7%2012.7%200%200%200%2011.3%2022.846a13.4%2013.4%200%200%200%205.487.653l.487-.058-.09-.481a12.6%2012.6%200%200%200-.825-2.73%2013%2013%200%200%200-1.777-3.155l-.348-.445.502-.158a10.8%2010.8%200%200%201%202.502-.455%2012%2012%200%200%201%202.585.129l.529.098.05-.536c.07-.768.106-1.53.106-2.261%200-.674-.031-1.341-.093-1.983l-.04-.442-.423.136c-1.205.385-2.454.58-3.712.58a10.2%2010.2%200%200%201-2.434-.287%204.14%204.14%200%200%201-1.748-.829%203.5%203.5%200%200%201-1.128-1.506%205.56%205.56%200%200%201-.392-2.102%205.37%205.37%200%200%201%20.491-2.316%204.38%204.38%200%200%201%201.401-1.631c.606-.417%201.29-.68%202.032-.782a10.5%2010.5%200%200%201%202.37.03%2012.4%2012.4%200%200%201%201.956.398l.685.195-.126-.698a12%2012%200%200%200-.82-2.75%2012.2%2012.2%200%200%200-1.706-3.076%2013.9%2013.9%200%200%200-5.748-2.552%2014.8%2014.8%200%200%200-5.118%203.903A14.2%2014.2%200%200%200%201.63%208.35a14.5%2014.5%200%200%200%20.003%206.376c.451%201.968%201.346%203.75%202.659%205.293a13%2013%200%200%200%204.142%203.238A14.1%2014.1%200%200%200%2014.39%2024a14.7%2014.7%200%200%200%205.864-.863%2013.5%2013.5%200%200%200%201.953-1.028l.745-.487-.272-.848a14%2014%200%200%201-.951-4.008c-.035-.453-.053-.902-.053-1.332%200-1.37.114-2.71.34-4.003a11.2%2011.2%200%200%200%20.04-2.842l-.113-.703-.687-.202a13.6%2013.6%200%200%200-2.138-.432%2011.5%2011.5%200%200%200-2.6-.037%205.35%205.35%200%200%200-2.483.824%203.39%203.39%200%200%200-1.096%201.251%204.37%204.37%200%200%200-.388%201.83%204.54%204.54%200%200%200%20.319%201.702%202.53%202.53%200%200%200%20.825%201.092%203.12%203.12%200%200%200%201.31.62c.504.116%201.022.176%201.543.176.993%200%201.967-.14%202.895-.416l.65-.195.31.606c.642%201.258%201.1%202.58%201.36%203.931l.053.28-.27.086c-1.396.44-2.843.664-4.298.664A13.8%2013.8%200%200%201%205.86%2019A13.1%2013.1%200%200%201%202.68%2012.396z%22%2F%3E%3C%2Fsvg%3E" alt="Sonar"> Sonar</span>
         </div>
       </div>
     </div>
-  </div>
 
   <!-- EDUCATION -->
   <div class="section reveal" id="formacion">
@@ -554,7 +578,7 @@
   </div>
 
   <footer>
-    <div class="footer-text">gonjibra@gmail.com &nbsp;·&nbsp; Brunete, Madrid &nbsp;·&nbsp; 2025</div>
+    <div class="footer-text">gonjibra@gmail.com &nbsp;·&nbsp; Brunete, Madrid &nbsp;·&nbsp; 2026</div>
   </footer>
 
 </div>
